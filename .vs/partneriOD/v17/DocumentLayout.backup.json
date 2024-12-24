@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "E:\\Users\\opali\\source\\repos\\partneriOD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\repositories\\partnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\repositories\\partnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\controllers\\partnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\controllers\\partnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\models\\partnerpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\models\\partnerpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\interfaces\\ipartnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\controllers\\policycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\controllers\\policycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\repositories\\partnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\repositories\\partnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\repositories\\policyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,50 +42,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "PartnerPolicy.cs",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\PartnerPolicy.cs",
+              "RelativeDocumentMoniker": "partneriOD\\Models\\PartnerPolicy.cs",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\PartnerPolicy.cs",
+              "RelativeToolTip": "partneriOD\\Models\\PartnerPolicy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T12:52:27.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PartnerController.cs",
               "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Controllers\\PartnerController.cs",
               "RelativeDocumentMoniker": "partneriOD\\Controllers\\PartnerController.cs",
               "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Controllers\\PartnerController.cs",
               "RelativeToolTip": "partneriOD\\Controllers\\PartnerController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB0AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAA6wCcAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T09:38:35.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Partner.cs",
               "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Partner.cs",
               "RelativeDocumentMoniker": "partneriOD\\Models\\Partner.cs",
               "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Partner.cs",
               "RelativeToolTip": "partneriOD\\Models\\Partner.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAgAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T07:23:50.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PartnerRepository.cs",
               "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PartnerRepository.cs",
               "RelativeDocumentMoniker": "partneriOD\\Repositories\\PartnerRepository.cs",
               "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PartnerRepository.cs",
               "RelativeToolTip": "partneriOD\\Repositories\\PartnerRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwB8AAABKAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvxoAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T07:25:46.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "IPartnerRepository.cs",
               "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Interfaces\\IPartnerRepository.cs",
               "RelativeDocumentMoniker": "partneriOD\\Interfaces\\IPartnerRepository.cs",
@@ -89,12 +106,11 @@
               "RelativeToolTip": "partneriOD\\Interfaces\\IPartnerRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:23:03.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T07:23:03.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "PolicyController.cs",
               "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Controllers\\PolicyController.cs",
               "RelativeDocumentMoniker": "partneriOD\\Controllers\\PolicyController.cs",
@@ -102,12 +118,11 @@
               "RelativeToolTip": "partneriOD\\Controllers\\PolicyController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T21:37:55.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T21:37:55.827Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PolicyRepository.cs",
               "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PolicyRepository.cs",
               "RelativeDocumentMoniker": "partneriOD\\Repositories\\PolicyRepository.cs",
@@ -115,12 +130,11 @@
               "RelativeToolTip": "partneriOD\\Repositories\\PolicyRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T19:59:02.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T19:59:02.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Policy.cs",
               "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Policy.cs",
               "RelativeDocumentMoniker": "partneriOD\\Models\\Policy.cs",
@@ -128,8 +142,7 @@
               "RelativeToolTip": "partneriOD\\Models\\Policy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T15:19:42.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T15:19:42.858Z"
             }
           ]
         }
