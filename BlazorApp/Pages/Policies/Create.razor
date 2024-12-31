@@ -1,0 +1,62 @@
+﻿@page "/policies/create"
+
+
+<div class="row">
+    <div class="col-lg-8">
+        <EditForm Model="PolicyData" OnValidSubmit="SavePolicy">
+            <DataAnnotationsValidator />
+
+            <h1 class="mb-5">New Policy</h1>
+
+            <div class="row mb-3" >
+                <label class="col-md-4 col-form-label">Policy Number</label>
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PolicyData.PolicyNumber" />
+                    <ValidationMessage For="@(() => PolicyData.PolicyNumber)" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">Policy Amount</label>
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PolicyData.PolicyAmount" />
+                    <ValidationMessage For="@(() => PolicyData.PolicyAmount)" />
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="offset-md-4 col-md-4 d-grid">
+                    @* <button class="btn btn-primary" @onclick="SavePolicy">Submit</button> *@
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-md-4 d-grid">
+                    <a class="btn btn-outline-primary" href="/" >Cancel</a>
+                </div>
+            </div>
+
+        </EditForm>
+    </div>
+</div>
+
+@inject HttpClient Http
+@inject NavigationManager navManager
+
+@code {
+    public PolicyDto PolicyData { set; get; } = new();
+
+    protected async Task SavePolicy()
+    {
+        var response = await Http.PostAsJsonAsync("https://localhost:7147/api/policy", PolicyData);
+
+        if (response.IsSuccessStatusCode)
+        {
+            navManager.NavigateTo("/");
+        }
+        else
+        {
+            var strResponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Json Response: \n" + strResponse);
+        }
+    }
+}

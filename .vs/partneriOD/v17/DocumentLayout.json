@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "E:\\Users\\opali\\source\\repos\\partneriOD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|e:\\users\\opali\\source\\repos\\partneriod\\blazorapp\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|solutionrelative:blazorapp\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\repositories\\partnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\repositories\\partnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\controllers\\partnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\controllers\\partnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|e:\\users\\opali\\source\\repos\\partneriod\\blazorapp\\dtos\\partnerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|solutionrelative:blazorapp\\dtos\\partnerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|e:\\users\\opali\\source\\repos\\partneriod\\blazorapp\\pages\\partners\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|solutionrelative:blazorapp\\pages\\partners\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|e:\\users\\opali\\source\\repos\\partneriod\\blazorapp\\dtos\\policydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|solutionrelative:blazorapp\\dtos\\policydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\models\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\models\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|e:\\users\\opali\\source\\repos\\partneriod\\blazorapp\\models\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|solutionrelative:blazorapp\\models\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|e:\\users\\opali\\source\\repos\\partneriod\\blazorapp\\dtos\\partnertypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|solutionrelative:blazorapp\\dtos\\partnertypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\models\\partnerpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\models\\partnerpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|e:\\users\\opali\\source\\repos\\partneriod\\blazorapp\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|solutionrelative:blazorapp\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\interfaces\\ipartnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\interfaces\\ipartnerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\controllers\\policycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\controllers\\policycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\repositories\\policyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\repositories\\policyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|e:\\users\\opali\\source\\repos\\partneriod\\partneriod\\models\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}|partneriOD\\partneriOD.csproj|solutionrelative:partneriod\\models\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|e:\\users\\opali\\source\\repos\\partneriod\\blazorapp\\pages\\partners\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}|BlazorApp\\BlazorApp.csproj|solutionrelative:blazorapp\\pages\\partners\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,107 +54,150 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PartnerPolicy.cs",
-              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\PartnerPolicy.cs",
-              "RelativeDocumentMoniker": "partneriOD\\Models\\PartnerPolicy.cs",
-              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\PartnerPolicy.cs",
-              "RelativeToolTip": "partneriOD\\Models\\PartnerPolicy.cs",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "BlazorApp\\Layout\\MainLayout.razor",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "BlazorApp\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-31T17:38:32.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Policy.cs",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Models\\Policy.cs",
+              "RelativeDocumentMoniker": "BlazorApp\\Models\\Policy.cs",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Models\\Policy.cs",
+              "RelativeToolTip": "BlazorApp\\Models\\Policy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T12:52:27.352Z",
+              "WhenOpened": "2024-12-31T17:11:31.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PartnerController.cs",
-              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Controllers\\PartnerController.cs",
-              "RelativeDocumentMoniker": "partneriOD\\Controllers\\PartnerController.cs",
-              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Controllers\\PartnerController.cs",
-              "RelativeToolTip": "partneriOD\\Controllers\\PartnerController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA6wCcAAABYAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "PartnerTypeDto.cs",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Dtos\\PartnerTypeDto.cs",
+              "RelativeDocumentMoniker": "BlazorApp\\Dtos\\PartnerTypeDto.cs",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Dtos\\PartnerTypeDto.cs",
+              "RelativeToolTip": "BlazorApp\\Dtos\\PartnerTypeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T09:38:35.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Partner.cs",
-              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Partner.cs",
-              "RelativeDocumentMoniker": "partneriOD\\Models\\Partner.cs",
-              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Partner.cs",
-              "RelativeToolTip": "partneriOD\\Models\\Partner.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBMAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:23:50.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PartnerRepository.cs",
-              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PartnerRepository.cs",
-              "RelativeDocumentMoniker": "partneriOD\\Repositories\\PartnerRepository.cs",
-              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PartnerRepository.cs",
-              "RelativeToolTip": "partneriOD\\Repositories\\PartnerRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvxoAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:25:46.618Z",
+              "WhenOpened": "2024-12-31T17:13:09.8Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IPartnerRepository.cs",
-              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Interfaces\\IPartnerRepository.cs",
-              "RelativeDocumentMoniker": "partneriOD\\Interfaces\\IPartnerRepository.cs",
-              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Interfaces\\IPartnerRepository.cs",
-              "RelativeToolTip": "partneriOD\\Interfaces\\IPartnerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
+              "Title": "PolicyDto.cs",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Dtos\\PolicyDto.cs",
+              "RelativeDocumentMoniker": "BlazorApp\\Dtos\\PolicyDto.cs",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Dtos\\PolicyDto.cs",
+              "RelativeToolTip": "BlazorApp\\Dtos\\PolicyDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:23:03.331Z"
+              "WhenOpened": "2024-12-31T17:09:54.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PartnerRepository.cs",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PartnerRepository.cs",
+              "RelativeDocumentMoniker": "partneriOD\\Repositories\\PartnerRepository.cs",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PartnerRepository.cs",
+              "RelativeToolTip": "partneriOD\\Repositories\\PartnerRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAWwCEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T15:19:41.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.razor",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Pages\\Partners\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp\\Pages\\Partners\\Create.razor",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Pages\\Partners\\Create.razor",
+              "RelativeToolTip": "BlazorApp\\Pages\\Partners\\Create.razor",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAAAOMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T20:44:33.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Partner.cs",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Partner.cs",
+              "RelativeDocumentMoniker": "partneriOD\\Models\\Partner.cs",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Partner.cs",
+              "RelativeToolTip": "partneriOD\\Models\\Partner.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBUAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T19:59:44.846Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "PolicyController.cs",
-              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Controllers\\PolicyController.cs",
-              "RelativeDocumentMoniker": "partneriOD\\Controllers\\PolicyController.cs",
-              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Controllers\\PolicyController.cs",
-              "RelativeToolTip": "partneriOD\\Controllers\\PolicyController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T21:37:55.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PolicyRepository.cs",
-              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PolicyRepository.cs",
-              "RelativeDocumentMoniker": "partneriOD\\Repositories\\PolicyRepository.cs",
-              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Repositories\\PolicyRepository.cs",
-              "RelativeToolTip": "partneriOD\\Repositories\\PolicyRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T19:59:02.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Policy.cs",
               "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Policy.cs",
               "RelativeDocumentMoniker": "partneriOD\\Models\\Policy.cs",
               "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\partneriOD\\Models\\Policy.cs",
               "RelativeToolTip": "partneriOD\\Models\\Policy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T15:19:42.858Z"
+              "WhenOpened": "2024-12-30T19:56:04.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PartnerDto.cs",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Dtos\\PartnerDto.cs",
+              "RelativeDocumentMoniker": "BlazorApp\\Dtos\\PartnerDto.cs",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Dtos\\PartnerDto.cs",
+              "RelativeToolTip": "BlazorApp\\Dtos\\PartnerDto.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAADwvzUAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T07:24:00.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Partner.cs",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Models\\Partner.cs",
+              "RelativeDocumentMoniker": "BlazorApp\\Models\\Partner.cs",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Models\\Partner.cs",
+              "RelativeToolTip": "BlazorApp\\Models\\Partner.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T16:52:39.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.razor",
+              "DocumentMoniker": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Pages\\Partners\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp\\Pages\\Partners\\Index.razor",
+              "ToolTip": "E:\\Users\\opali\\source\\repos\\partneriOD\\BlazorApp\\Pages\\Partners\\Index.razor",
+              "RelativeToolTip": "BlazorApp\\Pages\\Partners\\Index.razor",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAG0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T19:33:32.515Z",
+              "EditorCaption": ""
             }
           ]
         }

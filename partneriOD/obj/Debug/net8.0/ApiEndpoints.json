@@ -21,6 +21,22 @@
   },
   {
     "ContainingType": "partneriOD.Controllers.PartnerController",
+    "Method": "CreatePartnerAsync",
+    "RelativePath": "api/Partner",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "partner",
+        "Type": "partneriOD.Models.Partner",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "partneriOD.Controllers.PartnerController",
     "Method": "GetPartner",
     "RelativePath": "api/Partner/{id}",
     "HttpMethod": "GET",
@@ -35,7 +51,53 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[partneriOD.Models.Partner, partneriOD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "partneriOD.Models.Partner",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "partneriOD.Controllers.PartnerController",
+    "Method": "IsExternalCodeUnique",
+    "RelativePath": "api/Partner/checkUnique/{externalCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "externalCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "partneriOD.Controllers.PartnerTypeController",
+    "Method": "GetAllPartnerTypes",
+    "RelativePath": "api/PartnerType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[partneriOD.Models.PartnerType, partneriOD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -53,6 +115,48 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[partneriOD.Models.Policy, partneriOD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "partneriOD.Controllers.PolicyController",
+    "Method": "CreateVideoGame",
+    "RelativePath": "api/Policy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "policy",
+        "Type": "partneriOD.Models.Policy",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "partneriOD.Controllers.PolicyController",
+    "Method": "GetPolicy",
+    "RelativePath": "api/Policy/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[partneriOD.Models.Policy, partneriOD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",

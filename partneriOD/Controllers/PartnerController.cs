@@ -24,10 +24,31 @@ namespace partneriOD.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<List<Partner>>> GetPartner(int id)
+        //        public async Task<ActionResult<List<Partner>>> GetPartner(int id)
+        public async Task<ActionResult<Partner>> GetPartner(int id)
         {
             var partner = await _partnerRepository.GetPartnerAsync(id);
             return Ok(partner);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> CreatePartnerAsync(Partner partner)
+        {
+            if (partner == null)
+                return BadRequest();
+
+            var createdId = await _partnerRepository.CreatePartnerAsync(partner);
+            return CreatedAtAction(nameof(GetPartner), new { id = createdId }, partner);
+        }
+
+        //[HttpGet("{id}")]
+        [HttpGet]
+        [Route("checkUnique/{externalCode}")]
+        public async Task<bool> IsExternalCodeUnique(string externalCode)
+        {
+            var isExternalCodeUnique = await _partnerRepository.IsExternalCodeUnique(externalCode);
+
+            return isExternalCodeUnique;
         }
 
     }

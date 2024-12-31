@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "partneriOD\\partneriOD.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "BlazorApp\\BlazorApp.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

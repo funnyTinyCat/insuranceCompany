@@ -2,6 +2,7 @@
 using partneriOD.Interfaces;
 using partneriOD.Models;
 using System.Data.SqlClient;
+using System.Transactions;
 
 namespace partneriOD.Repositories
 {
@@ -14,14 +15,9 @@ namespace partneriOD.Repositories
             _connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
 
-        public Task<int> CreatePartnerAsync(Partner partner)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<IEnumerable<Partner>> GetAllPartnersAsync()
         {
-            var sql = GetPartnerSql(false);
+            var sql = GetPartnerSql(false, true);
             var partners = await QueryPartnersAsync(sql);
             return partners;
         }
@@ -42,20 +38,15 @@ namespace partneriOD.Repositories
                 {
                     try
                     {
-                        //int publisherId = await GetOrCreatePublisherAsync(connection,
-                        //    transaction, videoGame.Publisher.Name);
 
-                        //int developerId = await GetOrCreateDeveloperAsync(connection,
-                        //    transaction, videoGame.Developer.Name);
-
-                        int partnerTypeId = await GetOrCreatePartnerTypeAsync(connection,
-                            transaction, partner.PartnerType.Type);
+                        //int partnerTypeId = await GetOrCreatePartnerTypeAsync(connection,
+                        //    transaction, partner.PartnerType.Type);
 
                         string sql = @"
                          INSERT INTO partners (FirstName, LastName, Address, PartnerNumber, CroatianPIN, PartnerTypeId,
                             CreatedAtUtc, CreateByUser, IsForeign, ExternalCode, Gender)
                          VALUES (@FirstName, @LastName, @Address, @PartnerNumber, @CroatianPIN, @PartnerTypeId,
-                            SELECT GETUTCDATE(), @CreateByUser, @IsForeign, @ExternalCode, @Gender);
+                            GETUTCDATE(), @CreateByUser, @IsForeign, @ExternalCode, @Gender);
                          SELECT CAST(SCOPE_IDENTITY() as int);";
 
                         var id = await connection.QuerySingleAsync<int>(sql, new
@@ -65,7 +56,7 @@ namespace partneriOD.Repositories
                             partner.Address,
                             partner.PartnerNumber,
                             partner.CroatianPIN,
-                            PartnerTypeId = partnerTypeId,
+                            partner.PartnerTypeId,
                             partner.CreateByUser,
                             partner.IsForeign,
                             partner.ExternalCode,
@@ -73,30 +64,15 @@ namespace partneriOD.Repositories
                         }, transaction);
 
                         partner.Id = id;
-
-                        //if (videoGame.GameDetail != null)
-                        //{
-                        //    videoGame.GameDetail.VideoGameId = id;
-                        //    await CreateGameDetailAsync(connection, videoGame.GameDetail, transaction);
-                        //}
-
-                        //if (videoGame.Reviews != null)
-                        //{
-                        //    foreach (var review in videoGame.Reviews)
-                        //    {
-                        //        review.VideoGameId = id;
-                        //        await CreateReviewAsync(connection, review, transaction);
-                        //    }
-                        //}
-
+                     
                         if (partner.Policies != null)
                         {
                             foreach (var policy in partner.Policies)
                             {
                                 await CreatePartnerPolicyAsync(connection, new PartnerPolicy
                                 {
-                                    VideoGameId = id,
-                                    PlatformId = platform.Id
+                                    PartnerId = id,
+                                    PolicyId = policy.Id
                                 }, transaction);
                             }
                         }
@@ -117,7 +93,7 @@ namespace partneriOD.Repositories
         private async Task<int> GetOrCreatePartnerTypeAsync(SqlConnection connection,
         SqlTransaction transaction, string partnerType)
         {
-            string checkSql = "SELECT Id FROM partnerType WHERE Type = @Type";
+            string checkSql = "SELECT Id FROM partnerTypes WHERE Type = @Type";
             var existingPartnerTypeId = await connection
                 .QueryFirstOrDefaultAsync<int?>(checkSql, new
                 {
@@ -139,7 +115,15 @@ namespace partneriOD.Repositories
             return newPartnerTypeId;
         }
 
-        private string GetPartnerSql(bool withWhereClause)
+        private async Task CreatePartnerPolicyAsync(SqlConnection connection,
+            PartnerPolicy partnerPolicy, SqlTransaction transaction)
+        {
+            string sql = @"INSERT INTO partnerPolicy (PartnerId, PolicyId)
+                            VALUES (@PartnerId, @PolicyId);";
+            await connection.ExecuteAsync(sql, partnerPolicy, transaction);
+        }
+
+        private string GetPartnerSql(bool withWhereClause, bool withOrderBy = false)
         {
             var sql = @"
                     SELECT p.*, pt.*, pp.*, po.*
@@ -150,6 +134,9 @@ namespace partneriOD.Repositories
 
             if (withWhereClause)
                 sql += " WHERE p.Id = @Id";
+
+            if (withOrderBy)
+                sql += " order by p.CreatedAtUtc desc ";
 
             return sql;
         }
@@ -187,6 +174,26 @@ namespace partneriOD.Repositories
 
                 return partnerDictionary.Values;
             }
+        }
+
+        public async Task<bool> IsExternalCodeUnique(string externalCode)
+        {
+            bool isExternalCodeUnique = true;
+            var connection = new SqlConnection(_connectionString);
+
+            string checkSql = "SELECT * FROM partners WHERE externalCode = @ExternalCode";
+            var existingExternalCode = await connection
+                .QueryAsync<Partner>(checkSql, new
+                {
+                    ExternalCode = externalCode
+                });
+
+            if ((existingExternalCode.Count() > 0))
+            {
+                isExternalCodeUnique = false;
+            }
+
+            return isExternalCodeUnique;
         }
 
     }

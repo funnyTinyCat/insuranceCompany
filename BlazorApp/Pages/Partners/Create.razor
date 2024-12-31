@@ -1,0 +1,355 @@
+﻿@page "/partners/create"
+
+
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Policies</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">    
+                <div class="container" >
+                    <div class="custom-control custom-checkbox">                  
+                        @foreach (var policy in Policies)
+                        {
+                            <div class="form-check">
+                                @* @(e => test(buttonNumber, 5 * buttonNumber)) *@
+                                <input class="form-check-input" type="checkbox" value="@policy.Id" id="@policy.Id" @onclick="@(e => AddPolicy(policy.Id))" />
+                                <label class="form-check-label col-sm-7" for="@policy.Id">
+                                    @policy.PolicyNumber
+                                </label>
+                                <label class="form-check-label col-sm-4" for="@policy.Id">
+                                    @policy.PolicyAmount
+                                </label>
+                            </div>
+                        }
+                        <br />
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                @* <button type="button" class="btn btn-primary">Save changes</button> *@
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+</div>
+
+<div class="row">
+
+    <div class="col-lg-8">
+        <EditForm Model="PartnerData" OnValidSubmit="SavePartner" >
+            <DataAnnotationsValidator />
+            <h1 class="mb-5">New Partner</h1>
+
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">
+                    @if ((SumPolicies > 5000) || ( QuantityPolicies > 5 ))
+                    {
+                        <span class="text-info">*</span>
+                    }
+                    First Name</label>            
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PartnerData.FirstName" />
+                    <ValidationMessage For="@(() => PartnerData.FirstName)" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">Last Name</label>
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PartnerData.LastName" />
+                    <ValidationMessage For="@(() => PartnerData.LastName)" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">Address</label>
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PartnerData.Address" />
+                    <ValidationMessage For="@(() => PartnerData.Address)" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">Partner Number</label>
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PartnerData.PartnerNumber" />
+                    <ValidationMessage For="@(() => PartnerData.PartnerNumber)" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">Croatian PIN</label>
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PartnerData.CroatianPIN" />
+                    <ValidationMessage For="@(() => PartnerData.CroatianPIN)" />
+                </div>
+            </div>
+
+            @* here goes Partner Type *@
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">Partner Type</label> @* find out how *@
+                <div class="col-md-8">
+                    <select class="form-select" @bind="PartnerData.PartnerTypeId" >
+                        <option value="0" selected disabled hidden>Choose here</option>
+                        @foreach(var partnerType in PartnerTypes) 
+                        {
+                            <option value="@partnerType.Id">@partnerType.Type</option>
+                        }
+                    </select>
+                    <ValidationMessage For="@(() => PartnerData.PartnerTypeId)" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label">Created By User</label>
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PartnerData.CreateByUser" />
+                    <ValidationMessage For="@(() => PartnerData.CreateByUser)" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="btn btn-secondary" >Is Foreign:</label><br /> 
+                <InputRadioGroup id="isForeign" Name="isForeign" @bind-Value="PartnerData.IsForeign" class="form-control" > 
+                    <label><InputRadio Value="true" /> Yes</label> <br /> 
+                    <label><InputRadio Value="false" /> No</label> 
+                </InputRadioGroup>
+                <ValidationMessage For="@(() => PartnerData.IsForeign)" />
+            </div> 
+
+            <div class="row mb-3"> 
+                @* <label class="col-md-4 col-form-label">External Code</label>  *@
+                <div class="col-md-8">
+                    <input class="form-control" @bind="PartnerData.ExternalCode" hidden />
+                    @* <ValidationMessage For="@(() => PartnerData.ExternalCode)" />  *@
+                </div> 
+            </div> 
+
+            @* here goes Gender *@
+            <div class="row mb-3"> 
+                <label class="col-md-4 col-form-label" for="gender">Gender</label> @* find out how *@
+                <div class="col-md-8"> 
+                    <select id="gender" class="form-select" @bind="PartnerData.Gender">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="M" >Male</option> 
+                        <option value="F" >Female</option> 
+                        <option value="N" >Neutral</option> 
+                    </select>
+                    <ValidationMessage For="@(() => PartnerData.Gender)" />
+                </div> 
+            </div> 
+
+            <br />
+            <div class="row">
+                <div class="offset-md-4 col-md-4 d-grid">
+                    @* <button class="btn btn-primary" @onclick="SavePartner">Submit</button> *@
+                    <button type="submit" class="btn btn-primary" >Submit</button>
+                </div>
+                <div class="col-md-4 d-grid">
+                    <a class="btn btn-outline-primary" href="/">Cancel</a> 
+                </div>
+            </div><br />
+        </EditForm>
+        <br />
+
+    </div>
+
+    <div class="col-lg-4 ">
+        <div class="container">
+            <div class="row">
+                <h3>Policies:</h3>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-5">
+                    @* <a class="btn btn-primary mb-3" href="/partners/create" >New Partner</a> *@
+                    <button class="btn btn-primary mb-5" data-toggle="modal" data-target=".modal">Add Policy</button>
+                </div>
+            </div>
+
+            @foreach (var policy in PartnerData.Policies)
+            {
+                <div class="row">
+                    <div class="col">
+                        @policy.PolicyNumber
+                    </div>
+                    <div class="col">
+                        @policy.PolicyAmount
+                    </div>
+                </div>
+            }
+        </div>
+        <br />
+
+        <div class="container">
+
+            <div class="row">
+                <h4>External Code:</h4>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-5">
+                    <input type="text" @bind="ExternalCode" /> <span class="@TextColor">@UniqueCode</span>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-5">
+                    @* <a class="btn btn-primary mb-3" href="/partners/create" >New Partner</a> *@
+                    <button class="btn btn-primary mb-5" @onclick="(() => CheckExternalCode(ExternalCode))">Check is Code Unique</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+@inject HttpClient Http
+@inject NavigationManager navManager
+
+@code {
+
+    public PartnerDto PartnerData { set; get; } = new();
+    public List<PartnerTypeDto> PartnerTypes { set; get; } = new();
+
+    public List<PolicyDto> Policies { set; get; } = new();
+    public PolicyDto Policy { set; get; } = new();
+
+    public bool IsExternalCode { set; get; } = new();
+    public string ExternalCode { set; get; } = string.Empty;
+    public string UniqueCode { set; get; } = string.Empty;
+    public string TextColor { set; get; } = string.Empty;
+
+    public decimal SumPolicies { set; get; } = new();
+    public int QuantityPolicies { set; get; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Policies = await Http.GetFromJsonAsync<List<PolicyDto>>("https://localhost:7147/api/policy");
+        PartnerTypes = await Http.GetFromJsonAsync<List<PartnerTypeDto>>("https://localhost:7147/api/partnerType");
+    }
+
+    protected async Task SavePartner()
+    {
+        Console.WriteLine("u save partner sam.");
+
+        var response = await Http.PostAsJsonAsync("https://localhost:7147/api/partner", PartnerData);
+
+        if (response.IsSuccessStatusCode)
+        {           
+            navManager.NavigateTo("/1");
+        }
+        else
+        {
+            var strResponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Json Response: \n" + strResponse);
+        }
+    }
+
+
+
+    protected async void AddPolicy(int id)
+    {
+        Console.WriteLine("zapisujemo policy");
+
+        Policy =  Policies.Find(e => e.Id == id)!;
+
+        //        Console.WriteLine(Policy.PolicyNumber);
+
+        //  if (policy is not null & !currentPartner.Policies.Any(r => r.Id == policy.Id))
+        if (!PartnerData.Policies.Any(r => r.Id == id))
+        {
+            PartnerData.Policies.Add(Policy);
+            Console.WriteLine("dodajemo policy");
+        } else {
+            PartnerData.Policies.Remove(Policy);
+            Console.WriteLine("uklanjamo policy");
+        }
+
+        sumPolicies();
+        // await Task.Delay(2000);
+        quantityPolicies();
+
+    }
+
+    protected void ListPolicies(List<Policy> policies)
+    {
+        Console.WriteLine("Policy List:");
+        foreach(var x in policies)
+        {
+            Console.Write(x.Id);
+            Console.Write(x.PolicyNumber);
+            Console.Write(x.PolicyAmount);
+        }
+    }
+
+    protected void sumPolicies()
+    {
+        SumPolicies = 0;
+
+        foreach(var policy in PartnerData.Policies)
+        {
+            SumPolicies += policy.PolicyAmount;
+        }
+
+    }
+
+    protected void quantityPolicies()
+    {
+        QuantityPolicies = PartnerData.Policies.Count();
+    }
+
+    protected async Task CheckExternalCode(string externalCode)
+    {
+        if(externalCode.Length <= 0)
+        {
+            UniqueCode = "External Code is invalid.";
+            PartnerData.ExternalCode = string.Empty;
+            TextColor = "text-danger";
+            return;
+        } else if((externalCode.Length < 10) || (externalCode.Length > 20))
+        {
+            UniqueCode = "External Code should be between 10 and 20 characters.";
+            PartnerData.ExternalCode = string.Empty;
+            TextColor = "text-danger";
+            return;
+        }
+
+        IsExternalCode = await Http.GetFromJsonAsync<bool>("https://localhost:7147/api/partner/checkUnique/" + externalCode);
+
+        Console.WriteLine(IsExternalCode);
+
+        if (IsExternalCode)
+        {
+            UniqueCode = "External Code is valid.";
+            PartnerData.ExternalCode = externalCode;
+            TextColor = "text-success";
+        } else {
+            UniqueCode = "External Code is invalid.";
+            PartnerData.ExternalCode = string.Empty;
+            TextColor = "text-danger";
+        }
+    }
+
+}
+
+<script type="text/javascript">
+    
+    function checkboxClicked(elementId)
+    {
+        console.log(elementId.checked);
+    }
+
+</script>

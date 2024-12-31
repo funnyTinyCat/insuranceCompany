@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("partneriOD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9877db0df885b2e58a7aec3050dd8526095b7f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("partneriOD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("partneriOD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

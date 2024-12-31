@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "partneriOD", "partneriOD\partneriOD.csproj", "{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{402634D7-6A69-4080-80F2-D1E1AF3D5CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEA2290-D526-492D-B343-9AFCA6BEDE4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

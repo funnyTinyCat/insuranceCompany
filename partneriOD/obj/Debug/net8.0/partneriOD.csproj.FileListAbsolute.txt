@@ -41,3 +41,4 @@ E:\Users\opali\source\repos\partneriOD\partneriOD\obj\Debug\net8.0\refint\partne
 E:\Users\opali\source\repos\partneriOD\partneriOD\obj\Debug\net8.0\partneriOD.pdb
 E:\Users\opali\source\repos\partneriOD\partneriOD\obj\Debug\net8.0\partneriOD.genruntimeconfig.cache
 E:\Users\opali\source\repos\partneriOD\partneriOD\obj\Debug\net8.0\ref\partneriOD.dll
+E:\Users\opali\source\repos\partneriOD\partneriOD\obj\Debug\net8.0\partneriOD.sourcelink.json

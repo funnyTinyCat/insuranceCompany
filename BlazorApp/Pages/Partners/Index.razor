@@ -1,0 +1,184 @@
+﻿@page "/"
+@page "/{Id}"
+
+
+<!-- Large modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<br />
+					
+		
+
+			<div class="container">
+
+				<h3>Partner Detail</h3>
+				<br />
+
+				 <div class="row" style="margin-left:5px;margin-right:5px">
+
+					<div class="col-sm-4 bg-dark text-white">Full Name</div>
+					<div id="fullNameModal" class="col-sm-8 bg-dark text-white"></div>
+
+					<div class="col-sm-4 bg-secondary text-white">Address</div>
+					<div id="addressModal" class="col-sm-8 bg-secondary text-white"></div>
+					
+					<div class="col-sm-4 bg-dark text-white">Partner Number</div>
+					<div id="partnerNumberModal" class="col-sm-8 bg-dark text-white"></div>
+
+					<div class="col-sm-4 bg-secondary text-white">Croatian PIN</div>
+					<div id="croatianPINModal" class="col-sm-8 bg-secondary text-white"></div>
+
+					<div class="col-sm-4 bg-dark text-white">Partner Type</div>
+					<div id="partnerTypeModal" class="col-sm-8 bg-dark text-white"></div>
+
+					<div class="col-sm-4 bg-secondary text-white">Created At</div>
+					<div id="createdAtUtcModal" class="col-sm-8 bg-secondary text-white"></div>
+
+					<div class="col-sm-4 bg-dark text-white">Created By User</div>
+					<div id="createByUserModal" class="col-sm-8 bg-dark text-white"></div>
+
+					<div class="col-sm-4 bg-secondary text-white">Is Foreign</div>
+					<div id="isForeignModal" class="col-sm-8 bg-secondary text-white"></div>
+
+					<div class="col-sm-4 bg-dark text-white">External Code</div>
+					<div id="externalCodeModal" class="col-sm-8 bg-dark text-white"></div>
+
+					<div class="col-sm-4 bg-secondary text-white">Gender</div>
+					<div id="genderModal" class="col-sm-8 bg-secondary text-white"></div>
+
+				 </div> 
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<h1 class="text-center mb-3">List of Partners</h1>
+
+<a class="btn btn-primary mb-3" href="/partners/create" >New Partner</a>
+
+<a class="btn btn-primary mb-3" href="/policies/create">New Policy</a>
+
+
+@if (partners == null)
+{
+	<p>
+		<em>Loading...</em>
+	</p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Full Name</th>
+				<th>Partner Number</th>
+				<th>Croatian PIN</th>
+				<th>Partner Type</th>
+				<th>Created At</th>
+				<th>Is Foreign</th>
+				<th>Gender</th>
+				@* <th>Buttons</th> *@
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var partner in partners)
+			{
+				<tr class="@Color" id="@partner.Id" onclick="testFunction(this.id)" data-toggle="modal" data-target=".bd-example-modal-lg">
+
+					<td id=@("fullName" + partner.Id)>@(partner.FirstName + " " + partner.LastName)</td>
+					<td id=@("partnerNumber" + partner.Id)>@partner.PartnerNumber</td>
+					<td id=@("croatianPIN" + partner.Id)>@partner.CroatianPIN</td>
+					<td id=@("partnerType" + partner.Id)>@(partner.PartnerType != null ?  partner.PartnerType.Type : "")</td>
+					<td id=@("createdAtUtc" + partner.Id)>@partner.CreatedAtUtc</td>
+					@if(partner.IsForeign == true) {
+						<td id=@("isForeign" + partner.Id)>Yes</td>
+					} else {
+						<td id=@("isForeign" + partner.Id)>No</td>
+					}
+					@if(partner.Gender == 'M') {
+						<td id=@("gender" + partner.Id)>Male</td>
+					} else if(partner.Gender == 'F') {
+						<td id=@("gender" + partner.Id)>Female</td>
+					} else {
+						<td id=@("gender" + partner.Id)>Neutral</td>
+					}
+					
+
+					@* <td style="white-space:nowrap" > *@
+					@* 	<a class="btn btn-primary btn-sm" href="/partners/edit/@partner.Id">Edit</a> *@
+					@* 	<a class="btn btn-danger btn-sm" href="/partners/delete/@partner.Id">Delete</a> *@
+					@* </td> *@
+
+					<td class="visually-hidden" id=@("address" + partner.Id)>@partner.Address</td>
+					<td class="visually-hidden" id=@("externalCode" + partner.Id)>@partner.ExternalCode</td>
+					<td class="visually-hidden" id=@("createByUser" + partner.Id)>@partner.CreateByUser</td>
+				</tr>
+				@(Color = "");
+			}
+		</tbody>
+	</table>
+
+}
+
+
+@inject HttpClient Http
+@code {
+
+	[Parameter]
+	public string Id { get; set; }
+
+	public string Color { get; set; }
+	private List<Partner>? partners;
+	private Partner? showPartner;
+
+	protected override async Task OnInitializedAsync()
+	{
+		partners = await Http.GetFromJsonAsync<List<Partner>>("https://localhost:7147/api/partner");
+
+		if(Id == "1")
+		{
+			Color = "text-primary";
+		} 
+	}
+
+	private async void selectedPartner(int id)
+	{
+
+		showPartner = await Http.GetFromJsonAsync<Partner>("https://localhost:7147/api/partner/5");
+	}
+}
+
+<script type="text/javascript" >
+	function testFunction(elementId)
+	{
+
+		document.getElementById("fullNameModal").innerHTML = 
+			document.getElementById("fullName" + elementId).innerHTML;
+		document.getElementById("addressModal").innerHTML =
+			document.getElementById("address" + elementId).innerHTML;
+		document.getElementById("partnerNumberModal").innerHTML =
+			document.getElementById("partnerNumber" + elementId).innerHTML;
+		document.getElementById("croatianPINModal").innerHTML =
+			document.getElementById("croatianPIN" + elementId).innerHTML;
+		document.getElementById("partnerTypeModal").innerHTML =
+			document.getElementById("partnerType" + elementId).innerHTML;
+		document.getElementById("createdAtUtcModal").innerHTML =
+			document.getElementById("createdAtUtc" + elementId).innerHTML;
+		document.getElementById("createByUserModal").innerHTML =
+			document.getElementById("createByUser" + elementId).innerHTML;
+		document.getElementById("isForeignModal").innerHTML =
+			document.getElementById("isForeign" + elementId).innerHTML;
+		document.getElementById("externalCodeModal").innerHTML =
+			document.getElementById("externalCode" + elementId).innerHTML;
+		document.getElementById("genderModal").innerHTML =
+			document.getElementById("gender" + elementId).innerHTML;
+
+	}
+</script>
